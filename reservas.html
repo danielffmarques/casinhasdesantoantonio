@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas — Casinhas de Santo António | Protótipo Bruto</title>
+  <meta name="description" content="Reserve a sua estadia rústica nas Casinhas de Santo António em Seda, Alter do Chão. Disponibilidade e confirmação no momento com transparência de preços.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/icons/favicon_1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&family=Spinnaker&display=swap" rel="stylesheet">
+</head>
+<body class="booking-page-body">
+
+  <!-- =========================================================================
+       HEADER DA PÁGINA DE RESERVAS
+       ========================================================================= -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logos/logo_2.png" alt="Casinhas de Santo António" class="logo-img">
+      </a>
+      <div style="display: flex; align-items: center; gap: 1.5rem;">
+        <a href="index.html" class="btn btn-outline-dark" style="font-size: 0.88rem; padding: 0.5rem 1rem;">
+          &larr; Voltar ao Website
+        </a>
+        <a href="tel:+351930583315" class="nav-contact-link" style="color: var(--dark-neutral); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 0.4rem;">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>+351 930 583 315</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       CONTEÚDO PRINCIPAL DE RESERVAS
+       ========================================================================= -->
+  <main class="section" style="padding-top: 2rem;">
+    <div class="container">
+      
+      <div style="margin-bottom: 2rem;">
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 0.5rem;">
+          <h2 style="margin: 0;">Reservar Estadia — Casinhas de Santo António</h2>
+          <div class="prototype-transparency-note" style="background-color: #fff9db; border: 1px solid #ffe066; border-radius: var(--border-radius-sm); padding: 0.35rem 0.85rem; font-size: 0.82rem; color: #856404; display: inline-flex; align-items: center; gap: 0.45rem;">
+            <strong style="white-space: nowrap;">Nota de Transparência Bruto:</strong>
+            <span>Os preços apresentados são exemplares.</span>
+          </div>
+        </div>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 0.95rem;">Selecione as datas pretendidas, o número de hóspedes e a tarifa pretendida para confirmar a sua reserva com total transparência e garantia.</p>
+      </div>
+
+      <div class="booking-page-layout">
+        <!-- Coluna Esquerda: Passos de Reserva -->
+        <div class="booking-steps-col">
+          <form id="dedicatedBookingForm">
+
+            <!-- Passo 1: Datas da Estadia e Hóspedes (Primeira Escolha) -->
+            <div class="booking-step-block" style="margin-bottom: 2rem;">
+              <div class="booking-step-title">
+                <span class="booking-step-num">1</span>
+                <span>Datas da Estadia e Número de Hóspedes</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Escolha o intervalo de datas da sua estadia e o número de pessoas (capacidade máxima de 4 hóspedes por casinha):
+              </p>
+
+              <div class="booking-dates-guests-grid">
+                <div class="form-group">
+                  <label for="bookCheckin" style="font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem;">Data de Check-in</label>
+                  <div class="date-input-container">
+                    <input type="text" id="bookCheckin" name="checkin" class="form-control" placeholder="DD/MM/AAAA" autocomplete="off" required>
+                    <button type="button" class="date-calendar-btn" aria-label="Escolher data de check-in">
+                      <svg class="icon-svg" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="bookCheckout" style="font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem;">Data de Check-out</label>
+                  <div class="date-input-container">
+                    <input type="text" id="bookCheckout" name="checkout" class="form-control" placeholder="DD/MM/AAAA" autocomplete="off" required>
+                    <button type="button" class="date-calendar-btn" aria-label="Escolher data de check-out">
+                      <svg class="icon-svg" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="bookGuests" style="font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem;">Número de Hóspedes</label>
+                  <select id="bookGuests" name="guests" class="form-control">
+                    <option value="1 Hóspede">1 Hóspede</option>
+                    <option value="2 Hóspedes" selected>2 Hóspedes</option>
+                    <option value="3 Hóspedes">3 Hóspedes</option>
+                    <option value="4 Hóspedes">4 Hóspedes</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Passo 2: Alojamento e Escolha de Tarifa & Pequeno-Almoço -->
+            <div class="booking-step-block" style="margin-bottom: 2rem;">
+              <div class="booking-step-title">
+                <span class="booking-step-num">2</span>
+                <span>Alojamento, Tarifa e Pequeno-Almoço</span>
+              </div>
+
+              <!-- Cartão de Apresentação da Casa com 2 Quartos -->
+              <div class="booking-accommodation-card" style="background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--border-radius-md); padding: 1.25rem; margin-bottom: 1.5rem;">
+                <div style="display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
+                  <div style="width: 130px; height: 95px; border-radius: var(--border-radius-sm); overflow: hidden; flex-shrink: 0;">
+                    <img id="bookingCardThumb" src="assets/images/accommodation_5.jpg" alt="Casa com 2 Quartos" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  <div style="flex: 1; min-width: 240px;">
+                    <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.25rem;">
+                      <h3 style="font-size: 1.15rem; margin: 0; color: var(--dark-neutral);">Casa com 2 Quartos</h3>
+                      <span class="badge" style="background: rgba(39, 174, 96, 0.1); color: #27ae60; font-weight: 700; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px;">65 m² • Até 4 Hóspedes</span>
+                    </div>
+                    <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 0.5rem 0; line-height: 1.45;">
+                      <strong>Piso 0:</strong> Cama de casal, casa de banho, kitchenette equipada, sala de estar e ar condicionado.<br>
+                      <strong>Piso 1:</strong> Mezanino com duas camas singulares. Alpendre privativo e piscina exterior aquecida.
+                    </p>
+                    <div style="font-size: 0.78rem; color: var(--text-muted); display: flex; gap: 0.85rem; flex-wrap: wrap;">
+                      <span style="display: inline-flex; align-items: center; gap: 0.25rem;"><svg class="icon-svg" style="width: 14px; height: 14px; fill: var(--primary-accent);" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Kitchenette privativa</span>
+                      <span style="display: inline-flex; align-items: center; gap: 0.25rem;"><svg class="icon-svg" style="width: 14px; height: 14px; fill: var(--primary-accent);" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Piscina aquecida</span>
+                      <span style="display: inline-flex; align-items: center; gap: 0.25rem;"><svg class="icon-svg" style="width: 14px; height: 14px; fill: var(--primary-accent);" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Wi-Fi gratuito</span>
+                      <span style="display: inline-flex; align-items: center; gap: 0.25rem;"><svg class="icon-svg" style="width: 14px; height: 14px; fill: var(--primary-accent);" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Estacionamento na herdade</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Escolha da Tarifa: Não Reembolsável vs Reembolsável -->
+              <div style="margin-bottom: 1.5rem;">
+                <label style="font-weight: 700; font-size: 0.9rem; color: var(--dark-neutral); display: block; margin-bottom: 0.6rem;">
+                  Escolha a Sua Tarifa de Cancelamento:
+                </label>
+                <div class="rate-options-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <!-- Tarifa Não Reembolsável -->
+                  <label class="rate-card selected" data-rate="non-refundable" style="border: 2px solid var(--primary-accent); background: var(--bg-white); border-radius: var(--border-radius-md); padding: 1.1rem; cursor: pointer; display: block; position: relative; transition: all 0.2s ease;">
+                    <input type="radio" name="rateOption" value="non-refundable" checked style="position: absolute; top: 1rem; right: 1rem; accent-color: var(--primary-accent);">
+                    <div style="font-weight: 700; font-size: 0.95rem; color: var(--dark-neutral); margin-bottom: 0.25rem;">Não Reembolsável</div>
+                    <div style="font-size: 0.8rem; color: #d97706; font-weight: 600; margin-bottom: 0.5rem;">Melhor Preço Garantido</div>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0 0 0.75rem 0; line-height: 1.4;">
+                      Pagamento liquidado no momento da reserva. Sem possibilidade de reembolso em caso de cancelamento.
+                    </p>
+                    <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-accent);">
+                      <span id="rateNonRefDisplay">€108</span> / noite
+                    </div>
+                  </label>
+
+                  <!-- Tarifa Totalmente Reembolsável -->
+                  <label class="rate-card" data-rate="refundable" style="border: 1px solid var(--border-color); background: var(--bg-white); border-radius: var(--border-radius-md); padding: 1.1rem; cursor: pointer; display: block; position: relative; transition: all 0.2s ease;">
+                    <input type="radio" name="rateOption" value="refundable" style="position: absolute; top: 1rem; right: 1rem; accent-color: var(--primary-accent);">
+                    <div style="font-weight: 700; font-size: 0.95rem; color: var(--dark-neutral); margin-bottom: 0.25rem;">Totalmente Reembolsável</div>
+                    <div style="font-size: 0.8rem; color: #27ae60; font-weight: 600; margin-bottom: 0.5rem;">Cancelamento Flexível</div>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0 0 0.75rem 0; line-height: 1.4;">
+                      Cancelamento gratuito até 7 dias antes do check-in com devolução integral do valor pago.
+                    </p>
+                    <div style="font-size: 0.95rem; font-weight: 700; color: var(--dark-neutral);">
+                      <span id="rateRefDisplay">€112</span> / noite
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Escolha do Pequeno-Almoço / Brunch -->
+              <div>
+                <label style="font-weight: 700; font-size: 0.9rem; color: var(--dark-neutral); display: block; margin-bottom: 0.6rem;">
+                  Opção de Pequeno-Almoço / Brunch:
+                </label>
+                <div class="breakfast-options-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <!-- Apenas Alojamento -->
+                  <label class="breakfast-card selected" data-breakfast="standard" style="border: 2px solid var(--primary-accent); background: var(--bg-white); border-radius: var(--border-radius-md); padding: 1.1rem; cursor: pointer; display: block; position: relative; transition: all 0.2s ease;">
+                    <input type="radio" name="breakfastOption" value="standard" checked style="position: absolute; top: 1rem; right: 1rem; accent-color: var(--primary-accent);">
+                    <div style="font-weight: 700; font-size: 0.92rem; color: var(--dark-neutral); margin-bottom: 0.25rem;">Apenas Alojamento</div>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0 0 0.65rem 0; line-height: 1.4;">
+                      Inclui a oferta de boas-vindas: pão alentejano fresco matinal entregue à porta, azeite da herdade e café.
+                    </p>
+                    <div style="font-size: 0.85rem; font-weight: 700; color: #27ae60;">Incluído sem custo (€0)</div>
+                  </label>
+
+                  <!-- Com Menu de Pequeno-Almoço / Brunch -->
+                  <label class="breakfast-card" data-breakfast="extra" style="border: 1px solid var(--border-color); background: var(--bg-white); border-radius: var(--border-radius-md); padding: 1.1rem; cursor: pointer; display: block; position: relative; transition: all 0.2s ease;">
+                    <input type="radio" name="breakfastOption" value="extra" style="position: absolute; top: 1rem; right: 1rem; accent-color: var(--primary-accent);">
+                    <div style="font-weight: 700; font-size: 0.92rem; color: var(--dark-neutral); margin-bottom: 0.25rem;">Menu Pequeno-Almoço / Brunch</div>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0 0 0.65rem 0; line-height: 1.4;">
+                      Serviço completo por encomenda com produtos locais, frutas frescas, queijos regionais e sumos.
+                    </p>
+                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--primary-accent);">+ €12,50 por pessoa / dia</div>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Passo 3: Dados Pessoais e Faturação -->
+            <div class="booking-step-block" style="margin-bottom: 2rem;">
+              <div class="booking-step-title">
+                <span class="booking-step-num">3</span>
+                <span>Dados do Titular e Faturação</span>
+              </div>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+                <div class="form-group">
+                  <label for="bookName" style="font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem;">Nome Completo</label>
+                  <input type="text" id="bookName" class="form-control" placeholder="O seu nome e apelido" required>
+                </div>
+                <div class="form-group">
+                  <label for="bookEmail" style="font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem;">Email de Confirmação</label>
+                  <input type="email" id="bookEmail" class="form-control" placeholder="exemplo@dominio.pt" required>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+                <div class="form-group">
+                  <label for="bookPhone" style="font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem;">Telemóvel / WhatsApp</label>
+                  <input type="tel" id="bookPhone" class="form-control" placeholder="+351 912 345 678" required>
+                </div>
+                <div class="form-group">
+                  <label for="bookNotes" style="font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem;">Observações ou Pedidos Especiais</label>
+                  <input type="text" id="bookNotes" class="form-control" placeholder="Hora prevista de chegada, berço de bebé, etc.">
+                </div>
+              </div>
+
+              <!-- Secção de Faturação (NIF, Morada e Dados Fiscais) -->
+              <div class="billing-section" style="margin-top: 1.25rem; padding-top: 1.15rem; border-top: 1px solid var(--border-color);">
+                <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none;">
+                  <span style="display: flex; align-items: center; gap: 0.6rem; font-weight: 600; font-size: 0.92rem; color: var(--dark-neutral);">
+                    <input type="checkbox" id="toggleInvoiceFields" style="accent-color: var(--primary-accent); width: 1.15rem; height: 1.15rem; cursor: pointer;">
+                    <span>Desejo fatura com contribuinte (NIF)</span>
+                  </span>
+                  <span style="font-size: 0.78rem; color: var(--text-muted); background: var(--bg-light); padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid var(--border-color);">Opcional</span>
+                </label>
+
+                <!-- Bloco Expansível de Campos de Faturação -->
+                <div id="invoiceFieldsCollapse" style="display: none; margin-top: 1rem; padding: 1.15rem; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: var(--border-radius-sm);">
+                  <div class="billing-grid-2">
+                    <div class="form-group">
+                      <label for="invoiceNif" style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.35rem;">NIF / NIPC <span style="color: var(--primary-accent);">*</span></label>
+                      <input type="text" id="invoiceNif" class="form-control" placeholder="Ex: 123 456 789" maxlength="15">
+                    </div>
+                    <div class="form-group">
+                      <label for="invoiceName" style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.35rem;">Nome Fiscal ou Empresa</label>
+                      <input type="text" id="invoiceName" class="form-control" placeholder="Nome a constar na fatura">
+                    </div>
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="invoiceAddress" style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.35rem;">Morada de Faturação <span style="color: var(--primary-accent);">*</span></label>
+                    <input type="text" id="invoiceAddress" class="form-control" placeholder="Rua, número de porta e andar">
+                  </div>
+
+                  <div class="billing-grid-3">
+                    <div class="form-group">
+                      <label for="invoicePostal" style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.35rem;">Código Postal <span style="color: var(--primary-accent);">*</span></label>
+                      <input type="text" id="invoicePostal" class="form-control" placeholder="0000-000" maxlength="10">
+                    </div>
+                    <div class="form-group">
+                      <label for="invoiceCity" style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.35rem;">Localidade / Cidade <span style="color: var(--primary-accent);">*</span></label>
+                      <input type="text" id="invoiceCity" class="form-control" placeholder="Ex: Lisboa, Seda...">
+                    </div>
+                    <div class="form-group">
+                      <label for="invoiceCountry" style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.35rem;">País</label>
+                      <select id="invoiceCountry" class="form-control">
+                        <option value="Portugal" selected>Portugal</option>
+                        <option value="Espanha">Espanha</option>
+                        <option value="França">França</option>
+                        <option value="Reino Unido">Reino Unido</option>
+                        <option value="Alemanha">Alemanha</option>
+                        <option value="Outro">Outro</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.75rem;">
+                    A fatura-recibo oficial emitida pelas Casinhas de Santo António será enviada em formato digital para o email indicado.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Passo 4: Pagamento no Momento -->
+            <div class="booking-step-block" style="margin-bottom: 2rem;">
+              <div class="booking-step-title">
+                <span class="booking-step-num">4</span>
+                <span>Pagamento Seguro no Momento</span>
+              </div>
+              
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Confirmação imediata da sua estadia. Selecione o método de pagamento preferencial para concluir a reserva:
+              </p>
+
+              <!-- Seletor de Métodos de Pagamento -->
+              <div class="payment-methods-grid">
+                <label class="payment-method-card selected" data-method="card">
+                  <input type="radio" name="paymentMethod" value="Cartão de Crédito/Débito" checked>
+                  <div class="payment-method-header">
+                    <span class="payment-method-title">Cartão de Crédito / Débito</span>
+                  </div>
+                  <div class="payment-method-sub">Visa, Mastercard ou American Express</div>
+                </label>
+
+                <label class="payment-method-card" data-method="mbway">
+                  <input type="radio" name="paymentMethod" value="MB WAY">
+                  <div class="payment-method-header">
+                    <span class="payment-method-title">MB WAY</span>
+                  </div>
+                  <div class="payment-method-sub">Notificação instantânea no seu telemóvel</div>
+                </label>
+
+                <label class="payment-method-card" data-method="multibanco">
+                  <input type="radio" name="paymentMethod" value="Referência Multibanco">
+                  <div class="payment-method-header">
+                    <span class="payment-method-title">Referência Multibanco</span>
+                  </div>
+                  <div class="payment-method-sub">Entidade, referência e montante gerados na hora</div>
+                </label>
+              </div>
+
+              <!-- Campos Dinâmicos do Método de Pagamento -->
+              <div id="paymentFieldsCard" class="payment-fields-box">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                  <label for="cardNum" style="font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem;">Número do Cartão</label>
+                  <input type="text" id="cardNum" class="form-control" placeholder="4532 •••• •••• 8920" autocomplete="off" maxlength="19">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                  <div class="form-group">
+                    <label for="cardExp" style="font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem;">Validade</label>
+                    <input type="text" id="cardExp" class="form-control" placeholder="MM/AA" autocomplete="off" maxlength="5">
+                  </div>
+                  <div class="form-group">
+                    <label for="cardCvc" style="font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem;">CVC / CVV</label>
+                    <input type="password" id="cardCvc" class="form-control" placeholder="123" autocomplete="off" maxlength="4">
+                  </div>
+                </div>
+              </div>
+
+              <div id="paymentFieldsMbway" class="payment-fields-box" style="display: none;">
+                <div class="form-group">
+                  <label for="mbwayPhone" style="font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem;">Número de Telemóvel MB WAY</label>
+                  <input type="tel" id="mbwayPhone" class="form-control" placeholder="912 345 678" maxlength="12">
+                  <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-top: 0.35rem;">
+                    Receberá um pedido de autorização na aplicação MB WAY com validade de 5 minutos.
+                  </span>
+                </div>
+              </div>
+
+              <div id="paymentFieldsMultibanco" class="payment-fields-box" style="display: none;">
+                <div style="background-color: var(--bg-light); border: 1px dashed var(--border-color); border-radius: var(--border-radius-sm); padding: 1rem; font-size: 0.88rem; line-height: 1.6;">
+                  <div><strong>Entidade:</strong> 12345</div>
+                  <div><strong>Referência:</strong> 987 654 321</div>
+                  <div><strong>Prazo de Pagamento:</strong> 24 horas para garantia de vaga</div>
+                </div>
+              </div>
+
+              <div class="payment-security-badge">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                <span>Pagamento 100% encriptado e certificado • Confirmação instantânea</span>
+              </div>
+            </div>
+
+            <!-- Botão de Submissão -->
+            <button type="submit" class="btn btn-primary" id="btnSubmitBooking" style="width: 100%; padding: 0.95rem; font-size: 1.05rem; font-weight: 700;">
+              Confirmar Reserva e Pagamento (<span id="btnTotalPrice">€108,00</span>)
+            </button>
+          </form>
+        </div>
+
+        <!-- Coluna Direita: Sidebar Sticky com Resumo da Reserva e Apresentação do Preço -->
+        <aside class="booking-summary-col">
+          <div class="booking-summary-sticky">
+            <h3>Resumo da Estadia</h3>
+            
+            <div style="margin-bottom: 1rem; border-radius: var(--border-radius-sm); overflow: hidden; height: 140px;">
+              <img id="summaryUnitThumb" src="assets/images/accommodation_5.jpg" alt="Casa com 2 Quartos" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <div class="summary-detail-row">
+              <span class="summary-detail-label">Alojamento:</span>
+              <span class="summary-detail-val" id="summaryUnitName">Casa com 2 Quartos</span>
+            </div>
+            <div class="summary-detail-row">
+              <span class="summary-detail-label">Entrada (Check-in):</span>
+              <span class="summary-detail-val" id="summaryCheckin">Não selecionado</span>
+            </div>
+            <div class="summary-detail-row">
+              <span class="summary-detail-label">Saída (Check-out):</span>
+              <span class="summary-detail-val" id="summaryCheckout">Não selecionado</span>
+            </div>
+            <div class="summary-detail-row">
+              <span class="summary-detail-label">Duração:</span>
+              <span class="summary-detail-val" id="summaryNights">— noites</span>
+            </div>
+            <div class="summary-detail-row">
+              <span class="summary-detail-label">Hóspedes:</span>
+              <span class="summary-detail-val" id="summaryGuests">2 Hóspedes</span>
+            </div>
+            <div class="summary-detail-row">
+              <span class="summary-detail-label">Tarifa:</span>
+              <span class="summary-detail-val" id="summaryRateType">Não Reembolsável</span>
+            </div>
+            <div class="summary-detail-row">
+              <span class="summary-detail-label">Pequeno-Almoço:</span>
+              <span class="summary-detail-val" id="summaryBreakfast">Apenas Alojamento (€0)</span>
+            </div>
+            <div class="summary-detail-row" style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; margin-top: 0.5rem;">
+              <span class="summary-detail-label" style="font-weight: 600; color: var(--dark-neutral);">Método Escolhido:</span>
+              <span class="summary-detail-val" id="summaryPaymentMethod">Cartão</span>
+            </div>
+
+            <!-- Quadro de Discriminação de Preços -->
+            <div style="margin-top: 1.25rem; padding: 1.1rem; background: var(--bg-light); border-radius: var(--border-radius-sm); border: 1px solid var(--border-color);">
+              <div style="font-weight: 700; color: var(--dark-neutral); font-size: 0.88rem; margin-bottom: 0.6rem;">Discriminação do Valor:</div>
+              
+              <div style="display: flex; justify-content: space-between; font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+                <span>Estadia (<span id="calcNightlyRate">€108</span> &times; <span id="calcNightsCount">1</span> n.):</span>
+                <span id="calcLodgingSubtotal" style="font-weight: 600; color: var(--dark-neutral);">€108,00</span>
+              </div>
+
+              <div id="calcBreakfastRow" style="display: none; justify-content: space-between; font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+                <span>Pequeno-almoço (<span id="calcBreakfastCount">2</span> p. &times; <span id="calcBreakfastNights">1</span> n.):</span>
+                <span id="calcBreakfastSubtotal" style="font-weight: 600; color: var(--dark-neutral);">€25,00</span>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.6rem;">
+                <span>Impostos e IVA:</span>
+                <span>Incluídos</span>
+              </div>
+
+              <div style="border-top: 1px dashed var(--border-color); padding-top: 0.6rem; display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-weight: 700; font-size: 0.95rem; color: var(--dark-neutral);">Preço Total:</span>
+                <span id="summaryTotalPrice" style="font-size: 1.45rem; font-weight: 800; color: var(--primary-accent);">€108,00</span>
+              </div>
+            </div>
+
+            <!-- Inclusões Reais Verificadas -->
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-color); font-size: 0.82rem; color: var(--text-secondary);">
+              <div style="font-weight: 700; color: var(--dark-neutral); margin-bottom: 0.4rem;">Incluído na sua estadia:</div>
+              <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.55;">
+                <li style="margin-bottom: 0.25rem;"><svg class="icon-svg" style="fill: var(--primary-accent); margin-right: 0.35rem;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Pão fresco alentejano entregue à porta</li>
+                <li style="margin-bottom: 0.25rem;"><svg class="icon-svg" style="fill: var(--primary-accent); margin-right: 0.35rem;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>1 garrafa de 0.25L de azeite da herdade</li>
+                <li style="margin-bottom: 0.25rem;"><svg class="icon-svg" style="fill: var(--primary-accent); margin-right: 0.35rem;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Cápsulas de café e infusões de boas-vindas</li>
+                <li style="margin-bottom: 0.25rem;"><svg class="icon-svg" style="fill: var(--primary-accent); margin-right: 0.35rem;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Estacionamento privativo gratuito na quinta</li>
+                <li><svg class="icon-svg" style="fill: var(--primary-accent); margin-right: 0.35rem;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Piscina de água salgada aquecida com bomba de calor</li>
+              </ul>
+            </div>
+
+            <div class="summary-rate-notice">
+              <strong>Pagamento Imediato Garantido:</strong> Reserva registada e confirmada instantaneamente. Sem taxas ocultas de intermediação.
+            </div>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       MODAL DE CONFIRMAÇÃO DE PAGAMENTO E RESERVA CONCLUÍDA
+       ========================================================================= -->
+  <div class="booking-modal-backdrop" id="bookingSuccessModal" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+    <div class="booking-modal-content">
+      <div class="booking-modal-header">
+        <div>
+          <span class="modal-demo-badge">Pagamento Confirmado no Momento</span>
+          <h3 id="successModalTitle" style="margin: 0;">Reserva e Pagamento Concluídos com Sucesso</h3>
+        </div>
+        <button type="button" class="booking-modal-close" id="successModalCloseBtn" aria-label="Fechar Janela">&times;</button>
+      </div>
+
+      <div style="padding: 1.25rem 0;">
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem;">
+          O seu pagamento foi processado com sucesso e a estadia nas Casinhas de Santo António está garantida. Enviámos o comprovativo e os detalhes para o seu correio eletrónico.
+        </p>
+
+        <div style="background-color: var(--bg-light); border-radius: var(--border-radius-sm); padding: 1.15rem; margin-bottom: 1.5rem; font-size: 0.88rem; line-height: 1.65; border-left: 3px solid var(--primary-accent);">
+          <div><strong>Alojamento:</strong> <span id="modalResUnit">Casa com 2 Quartos</span></div>
+          <div><strong>Datas:</strong> <span id="modalResDates">—</span> (<span id="modalResNights">—</span>)</div>
+          <div><strong>Hóspede:</strong> <span id="modalResName">—</span> • <span id="modalResGuests">2 Hóspedes</span></div>
+          <div><strong>Tarifa &amp; Pequeno-Almoço:</strong> <span id="modalResRate">—</span></div>
+          <div><strong>Preço Total:</strong> <span id="modalResTotal" style="font-weight: 700; color: var(--primary-accent);">€—</span></div>
+          <div><strong>Contacto:</strong> <span id="modalResContact">—</span></div>
+          <div><strong>Método de Pagamento:</strong> <span id="modalResPayment">Cartão de Crédito / Débito</span></div>
+          <div id="modalResBillingRow" style="display: none;"><strong>Faturação:</strong> <span id="modalResBilling">—</span></div>
+          <div><strong>Estado:</strong> <span style="color: #27ae60; font-weight: 700;">Confirmado e Pago</span></div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <a id="modalWhatsAppLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="text-align: center; padding: 0.8rem; font-weight: 600;">
+            Enviar Comprovativo por WhatsApp ao Anfitrião
+          </a>
+          <a id="modalEmailLink" href="#" class="btn btn-dark" style="text-align: center; padding: 0.8rem; font-weight: 600;">
+            Ver Comprovativo por Email
+          </a>
+          <button type="button" class="btn btn-outline-dark" id="modalCloseReviewBtn" style="padding: 0.65rem;">
+            Concluir e Voltar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FOOTER OFICIAL
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo-container">
+            <img src="assets/logos/logo_13.png" alt="Casinhas de Santo António" class="footer-logo">
+          </div>
+          <p style="color: rgba(255,255,255,0.78); font-size: 0.9rem; line-height: 1.55;">
+            Turismo rural autêntico no coração do Alto Alentejo. Casas rústicas independentes, olival tradicional e silêncio pleno na Quinta de Santo António.
+          </p>
+          <div class="footer-contacts">
+            <p><a href="tel:+351930583315">Telemóvel: +351 930 583 315</a></p>
+            <p><a href="mailto:geral@casinhasdesantoantonio.pt">Email: geral@casinhasdesantoantonio.pt</a></p>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 0.3rem;">Seda, Alter do Chão, Alto Alentejo, Portugal</p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#experiencia">Experiência</a></li>
+            <li><a href="index.html#espaco-casinhas">Casinhas</a></li>
+            <li><a href="index.html#atividades">Arredores</a></li>
+            <li><a href="index.html#opinioes">Opiniões</a></li>
+            <li><a href="index.html#faq-duvidas">FAQs</a></li>
+            <li style="margin-top: 0.65rem;"><a href="reservas.html" class="nav-cta footer-nav-cta">Reservar Estadia</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Localização &amp; Acesso</h4>
+          <p class="footer-location-address">
+            Quinta de Santo António, 7440-252 Seda, Alter do Chão, Alto Alentejo, Portugal<br>
+            <span style="font-size: 0.82rem; color: rgba(255,255,255,0.65);">GPS: 39°10'22.63"N 7°46'35.11"W</span>
+          </p>
+          <div class="footer-map-container">
+            <iframe 
+              class="footer-map-frame"
+              title="Localização Casinhas de Santo António em Seda"
+              src="https://maps.google.com/maps?q=39.1729528,-7.7764194&z=14&output=embed"
+              loading="lazy">
+            </iframe>
+          </div>
+          <div style="margin-top: 0.65rem;">
+            <a href="https://maps.google.com/maps?q=39.1729528,-7.7764194" target="_blank" rel="noopener noreferrer" class="footer-map-cta">
+              Abrir no Google Maps &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <div>© 2026 Casinhas de Santo António. Todos os direitos reservados.</div>
+          <div class="footer-legal-links">
+            <a href="#" class="legal-modal-trigger" data-legal="privacy">Política de Privacidade</a>
+            <span class="sep">•</span>
+            <a href="#" class="legal-modal-trigger" data-legal="terms">Termos e Condições</a>
+            <span class="sep">•</span>
+            <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
+          </div>
+        </div>
+        <div class="prototype-notice">
+          Protótipo Demonstrativo Bruto • Sem transações financeiras reais
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

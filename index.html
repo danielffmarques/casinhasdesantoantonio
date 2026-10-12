@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casinhas de Santo António — Turismo Rural no Alentejo | Protótipo Bruto</title>
+  <meta name="description" content="Casas rústicas independentes na Quinta de Santo António em Seda, Alter do Chão. Turismo rural autêntico no Alto Alentejo com piscina exterior, olival e reserva direta.">
+  <meta name="keywords" content="Casinhas de Santo António, turismo rural Alentejo, alojamento Seda, Alter do Chão, casas de campo Alentejo, turismo rural com piscina, Alto Alentejo">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Casinhas de Santo António — Turismo Rural no Alentejo">
+  <meta property="og:description" content="Casas rústicas independentes integradas no olival centenário em Seda, Alter do Chão. Turismo rural autêntico no Alto Alentejo com piscina exterior e reserva direta.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Casinhas de Santo António",
+    "description": "Turismo rural autêntico na Quinta de Santo António em Seda, Alter do Chão, Alto Alentejo. Casas rústicas independentes com piscina exterior e olival centenário.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Seda",
+      "addressRegion": "Alter do Chão, Alentejo",
+      "addressCountry": "PT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.1729528,
+      "longitude": -7.7764194
+    },
+    "telephone": "+351930583315",
+    "email": "geral@casinhasdesantoantonio.pt",
+    "priceRange": "€€",
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Piscina Exterior", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Estacionamento Coberto Gratuito", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi Gratuito", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Pão Fresco Matinal", "value": true }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/icons/favicon_1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&family=Spinnaker&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- =========================================================================
+       A. NAVEGAÇÃO (Header com Apple Design Chrome & Âncoras Fluidas)
+       ========================================================================= -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logos/logo_2.png" alt="Casinhas de Santo António" class="logo-img">
+      </a>
+      <button class="mobile-menu-btn" aria-label="Abrir Menu" aria-expanded="false">
+        <svg class="icon-svg-lg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+        <li><a href="#espaco-casinhas" class="nav-link">Casinhas</a></li>
+        <li><a href="#atividades" class="nav-link">Arredores</a></li>
+        <li><a href="#opinioes" class="nav-link">Opiniões</a></li>
+        <li><a href="#faq-duvidas" class="nav-link">FAQs</a></li>
+        <li><a href="reservas.html" class="nav-cta">Reservar Estadia</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         B. APRESENTAÇÃO DO ALOJAMENTO (Hero com Proposta de Valor e Barra de Reserva)
+         ======================================================================= -->
+    <section class="hero" style="background-image: url('assets/images/accommodation_14.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content-wrapper">
+        <div class="hero-content">
+          <span class="hero-tagline">Turismo Rural • Seda, Alter do Chão, Alentejo</span>
+          <h1 class="hero-title">Serenidade, Natureza e Autenticidade no Alentejo</h1>
+          <p class="hero-desc">Um refúgio acolhedor onde o tempo abranda. Casas rústicas independentes integradas no olival centenário da Quinta de Santo António, em Seda, Alter do Chão.</p>
+          <div class="hero-actions">
+            <a href="reservas.html" class="btn btn-primary">Reservar Estadia</a>
+            <a href="#espaco-casinhas" class="btn btn-secondary">Conhecer as Casinhas</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra Horizontal de Disponibilidade Directa para Reservas (Integrada no Hero) -->
+      <div class="container hero-booking-wrapper">
+        <div class="booking-bar-horizontal">
+          <form class="booking-form-horizontal" id="bookingBarForm">
+            <div class="form-group">
+              <label for="checkin">Check-in</label>
+              <div class="date-input-container">
+                <input type="text" id="checkin" name="checkin" class="form-control" placeholder="DD/MM/AAAA" autocomplete="off" required>
+                <button type="button" class="date-calendar-btn" aria-label="Escolher data de check-in">
+                  <svg class="icon-svg" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="checkout">Check-out</label>
+              <div class="date-input-container">
+                <input type="text" id="checkout" name="checkout" class="form-control" placeholder="DD/MM/AAAA" autocomplete="off" required>
+                <button type="button" class="date-calendar-btn" aria-label="Escolher data de check-out">
+                  <svg class="icon-svg" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="guests">Hóspedes</label>
+              <select id="guests" name="guests" class="form-control">
+                <option value="1 Hóspede">1 Hóspede</option>
+                <option value="2 Hóspedes" selected>2 Hóspedes</option>
+                <option value="3 Hóspedes">3 Hóspedes</option>
+                <option value="4+ Hóspedes">4 ou mais Hóspedes</option>
+              </select>
+            </div>
+            <div class="form-group form-group-submit">
+              <button type="submit" class="btn btn-primary">Ver Disponibilidade</button>
+            </div>
+          </form>
+          <div class="booking-bar-note">
+            <span>Canal direto de reserva • Encaminhamento com parâmetros para a página de reservas</span>
+            <span class="booking-guarantee-tag">Melhor Tarifa Garantida</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         C. EXPERIÊNCIA E ENVOLVENTE (Identidade, Pão Matinal, Olival e Hospitalidade)
+         ======================================================================= -->
+    <section id="experiencia" class="section">
+      <div class="container">
+        <div class="two-cols">
+          <div>
+            <h2>Um Refúgio Alentejano com Tradição e Hospitalidade Genuína</h2>
+            <p>Situada na tranquilidade de Seda, no concelho de Alter do Chão, a Quinta de Santo António preserva a harmonia da vida no campo com o conforto contemporâneo. Um lugar pensado para quem valoriza a calma, o espaço e o tempo sem pressa.</p>
+            
+            <div style="margin: 1.5rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div style="background-color: var(--bg-light); padding: 1rem; border-radius: var(--border-radius-sm); border-left: 3px solid var(--primary-accent);">
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.25rem;">Pão Fresco Todas as Manhãs</h4>
+                <p style="font-size: 0.85rem; margin: 0; color: var(--text-secondary);">Entregue à porta da casinha ao amanhecer (exceto domingos e feriados) para um despertar aconchegante.</p>
+              </div>
+              <div style="background-color: var(--bg-light); padding: 1rem; border-radius: var(--border-radius-sm); border-left: 3px solid var(--primary-accent);">
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.25rem;">Azeite Virgem da Herdade</h4>
+                <p style="font-size: 0.85rem; margin: 0; color: var(--text-secondary);">Oferta de boas-vindas de 0.25L de azeite de produção própria e cápsulas de café na casinha.</p>
+              </div>
+            </div>
+
+            <p>Na véspera da sua chegada, o acolhimento é preparado pessoalmente com contacto telefónico e envio dos códigos de acesso autónomo, garantindo máxima flexibilidade e segurança.</p>
+            
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="reservas.html" class="btn btn-primary">Planear a Sua Estadia</a>
+              <a href="#atividades" class="btn btn-outline-dark">Descobrir a Região</a>
+            </div>
+          </div>
+          <div class="experience-mosaic-slider" aria-label="Mosaico da Quinta de Santo António">
+            <div class="experience-mosaic-carousel" id="experienceCarousel">
+              <div class="experience-mosaic-track" id="experienceTrack">
+                <!-- Painel 1: 4 imagens juntas no layout editorial original -->
+                <div class="estate-montage-panel">
+                  <figure class="montage-card montage-card-tl">
+                    <img src="assets/images/farm_16.jpg" alt="Piscina exterior e solário com vista para o olival" loading="lazy" draggable="false">
+                  </figure>
+                  <figure class="montage-card montage-card-tr">
+                    <img src="assets/images/accommodation_5.jpg" alt="Casinhas rústicas tradicionais de terracota ao entardecer" loading="lazy" draggable="false">
+                  </figure>
+                  <figure class="montage-card montage-card-bl">
+                    <img src="assets/images/farm_60.jpg" alt="58 hectares de olival tradicional e campos alentejanos" loading="lazy" draggable="false">
+                  </figure>
+                  <figure class="montage-card montage-card-br">
+                    <img src="assets/images/farm_67.jpg" alt="Vida na herdade e animais a pastar sob as oliveiras" loading="lazy" draggable="false">
+                  </figure>
+                </div>
+                <!-- Painel 2: +4 imagens juntas no mesmo layout editorial -->
+                <div class="estate-montage-panel">
+                  <figure class="montage-card montage-card-tl">
+                    <img src="assets/images/farm_15.jpg" alt="Deck exterior com espreguiçadeiras e tranquilidade alentejana" loading="lazy" draggable="false">
+                  </figure>
+                  <figure class="montage-card montage-card-tr">
+                    <img src="assets/images/accommodation_50.jpg" alt="Piscina da herdade com horizonte sereno" loading="lazy" draggable="false">
+                  </figure>
+                  <figure class="montage-card montage-card-bl">
+                    <img src="assets/images/farm_63.jpg" alt="Pastagens alentejanas e animais da herdade" loading="lazy" draggable="false">
+                  </figure>
+                  <figure class="montage-card montage-card-br">
+                    <img src="assets/images/accommodation_18.jpg" alt="Pormenores arquitetónicos e alpendres acolhedores" loading="lazy" draggable="false">
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         D. O ESPAÇO E OS ALOJAMENTOS (Fotografia Aérea Interativa + Catálogo de Casinhas)
+         ======================================================================= -->
+    <section id="espaco-casinhas" class="section section-bg-light">
+      <span id="casinhas" class="section-anchor"></span>
+      <div class="container">
+        <div class="section-header">
+          <h2>Explore a Herdade Vista de Cima</h2>
+          <p>Clique nos pontos numerados na fotografia aérea para conhecer em detalhe as casinhas, a piscina exterior, o olival e a envolvente da Quinta de Santo António.</p>
+        </div>
+
+        <!-- Vista Aérea Interativa com Design Baseado na Imagem de Referência -->
+        <div class="aerial-explorer-wrapper">
+          <div class="aerial-map-frame" id="aerialMapFrame">
+            <img src="assets/images/quinta_aerial_drone.jpg" alt="Vista aérea da Quinta de Santo António e Olival" class="aerial-map-img">
+            
+            <!-- Pins Circulares Numerados com Anel Branco e Fundo da Marca -->
+            <button type="button" class="aerial-pin aerial-hotspot" style="top: 54%; left: 36.5%;" data-spot="1" aria-label="Ponto 1: Piscina da Herdade">
+              <span>1</span>
+            </button>
+
+            <button type="button" class="aerial-pin aerial-hotspot" style="top: 32%; left: 41%;" data-spot="2" aria-label="Ponto 2: Casinhas Tradicionais">
+              <span>2</span>
+            </button>
+
+            <button type="button" class="aerial-pin aerial-hotspot" style="top: 73%; left: 26.5%;" data-spot="3" aria-label="Ponto 3: Olival e Produção de Azeite">
+              <span>3</span>
+            </button>
+
+            <button type="button" class="aerial-pin aerial-hotspot" style="top: 22.5%; left: 44.5%;" data-spot="4" aria-label="Ponto 4: Estacionamento Privado e Coberto">
+              <span>4</span>
+            </button>
+
+            <!-- Card Interativo Flutuante (Design Compacto e Elegante — Inicia Fechado) -->
+            <div class="aerial-spot-card" id="aerialSpotCard">
+              <div class="aerial-card-img-wrapper">
+                <img id="aerialCardImg" src="assets/images/accommodation_50.jpg" alt="Piscina da Herdade">
+                <button type="button" class="aerial-card-close" id="aerialCardClose" aria-label="Fechar detalhes">&times;</button>
+              </div>
+
+              <div class="aerial-card-body">
+                <h3 class="aerial-card-title" id="aerialCardTitle">Piscina da Herdade</h3>
+                <p class="aerial-card-desc" id="aerialCardDesc">Piscina exterior e solário integrados na tranquilidade e vista aberta sobre o olival.</p>
+
+                <div class="aerial-card-pills" id="aerialCardPills">
+                  <div class="aerial-card-pill">
+                    <svg class="icon-svg" style="fill: var(--primary-accent); width: 0.8rem; height: 0.8rem;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Acesso livre para todos os hóspedes</span>
+                  </div>
+                  <div class="aerial-card-pill">
+                    <svg class="icon-svg" style="fill: var(--primary-accent); width: 0.8rem; height: 0.8rem;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Solário calmo com vista para o olival</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Apresentação do Alojamento: Imagens à Esquerda + Texto à Direita -->
+        <div style="margin-top: 3.5rem;">
+          <div class="two-cols">
+            <!-- Coluna Esquerda: Carrossel Automático com Fotografias Oficiais do Booking -->
+            <div class="casinha-slider-container" id="casinhasCarousel" aria-label="Fotografias das Casinhas de Santo António">
+              <div class="casinha-slider-track" id="casinhasTrack">
+                <div class="casinha-slide active">
+                  <img src="assets/images/booking_casinha_1.jpg" alt="Casinhas de Santo António - Alpendre exterior e arquitetura tradicional" loading="lazy">
+                </div>
+                <div class="casinha-slide">
+                  <img src="assets/images/booking_casinha_2.jpg" alt="Interior open space - Sala de estar e zona de refeições" loading="lazy">
+                </div>
+                <div class="casinha-slide">
+                  <img src="assets/images/booking_casinha_3.jpg" alt="Piso 0 - Cama de casal com luz natural e conforto acolhedor" loading="lazy">
+                </div>
+                <div class="casinha-slide">
+                  <img src="assets/images/booking_casinha_4.jpg" alt="Piso 1 - Escadas em caracol e mezanino com duas camas" loading="lazy">
+                </div>
+                <div class="casinha-slide">
+                  <img src="assets/images/booking_casinha_5.jpg" alt="Casa de banho privativa com duche walk-in" loading="lazy">
+                </div>
+                <div class="casinha-slide">
+                  <img src="assets/images/booking_casinha_6.jpg" alt="Piscina exterior de água salgada aquecida e solário" loading="lazy">
+                </div>
+                <div class="casinha-slide">
+                  <img src="assets/images/booking_casinha_7.jpg" alt="Kitchenette equipada com eletrodomésticos essenciais" loading="lazy">
+                </div>
+                <div class="casinha-slide">
+                  <img src="assets/images/booking_casinha_8.jpg" alt="Pátio privativo e envolvente rural da herdade" loading="lazy">
+                </div>
+                <div class="casinha-slide">
+                  <img src="assets/images/booking_casinha_9.jpg" alt="Mezanino Piso 1 com camas singulares e ambiente sereno" loading="lazy">
+                </div>
+                <div class="casinha-slide">
+                  <img src="assets/images/booking_casinha_10.jpg" alt="Espaços verdes e tranquilidade do monte alentejano" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Controlos de Navegação -->
+              <button type="button" class="casinha-slider-nav prev" id="casinhasPrevBtn" aria-label="Fotografia anterior">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+              </button>
+              <button type="button" class="casinha-slider-nav next" id="casinhasNextBtn" aria-label="Próxima fotografia">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+              </button>
+
+              <!-- Indicadores de Pontos (Dots) -->
+              <div class="casinha-slider-dots" id="casinhasDots"></div>
+            </div>
+
+            <!-- Coluna Direita: Apresentação Focada das Casinhas -->
+            <div>
+              <h2>Casinhas de Santo António</h2>
+              <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.15rem;">
+                Oferecemos uma estadia serena num monte tipicamente alentejano com <strong>6 Casinhas unifamiliares em open space</strong> (sem portas nem paredes), concebidas para proporcionar privacidade, conforto e repouso absoluto:
+              </p>
+
+              <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                <li style="display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+                  <svg class="icon-svg" style="fill: var(--primary-accent); width: 1.1rem; height: 1.1rem; flex-shrink: 0; margin-top: 0.15rem;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <span><strong>Tipologia Open Space (até 4 pessoas):</strong> 65 m² distribuídos por dois pisos interligados, com entrada privativa e alpendre.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+                  <svg class="icon-svg" style="fill: var(--primary-accent); width: 1.1rem; height: 1.1rem; flex-shrink: 0; margin-top: 0.15rem;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <span><strong>Piso 0:</strong> Cama de casal, casa de banho com duche, kitchenette equipada com eletrodomésticos essenciais, zona de estar com Smart TV, mesa de refeição e climatização frio/quente.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+                  <svg class="icon-svg" style="fill: var(--primary-accent); width: 1.1rem; height: 1.1rem; flex-shrink: 0; margin-top: 0.15rem;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <span><strong>Piso 1 (Mezanino):</strong> Acesso por escadas em caracol com duas camas singulares e luz natural.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+                  <svg class="icon-svg" style="fill: var(--primary-accent); width: 1.1rem; height: 1.1rem; flex-shrink: 0; margin-top: 0.15rem;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  <span><strong>Comodidades Incluídas:</strong> Piscina de água salgada aquecida com zona infantil, espreguiçadeira e toalhas de piscina atribuídas, zona de churrasco e check-in autónomo sem contacto.</span>
+                </li>
+              </ul>
+
+              <div style="margin-bottom: 1.15rem;">
+                <a href="reservas.html" class="btn btn-primary" style="padding: 0.75rem 1.6rem; font-weight: 600;">Reservar Casinha</a>
+              </div>
+
+              <div class="prototype-transparency-note" style="background-color: #fff9db; border: 1px solid #ffe066; border-radius: var(--border-radius-sm); padding: 0.65rem 0.95rem; font-size: 0.8rem; color: #856404; display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.45;">
+                <strong style="white-space: nowrap;">Nota de Transparência Bruto:</strong>
+                <span>As imagens apresentadas refletem a estrutura do alojamento e deverão ser validadas pelo anfitrião.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         E. MAPA E ATIVIDADES NAS PROXIMIDADES (Património e Natureza Verificados)
+         ======================================================================= -->
+    <section id="atividades" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Atividades e Pontos de Interesse nas Proximidades</h2>
+          <p>Localização privilegiada no Alto Alentejo, perfeita para conjugar o descanso na herdade com visitas culturais e passeios na natureza.</p>
+        </div>
+
+        <div style="background-color: #fff9db; border: 1px solid #ffe066; border-radius: var(--border-radius-sm); padding: 0.75rem 1.25rem; margin-bottom: 2rem; font-size: 0.85rem; color: #856404; display: flex; align-items: center; gap: 0.5rem;">
+          <strong>Nota de Transparência Bruto:</strong>
+          <span>Sugestões da região recolhidas por proximidade e relevância cultural. [Requer seleção e validação final do anfitrião].</span>
+        </div>
+
+        <!-- Seletor Interativo por Categorias (Percursos, Monumentos, Atividades, Restaurantes) -->
+        <div class="activities-tabs-wrapper">
+          <div class="activities-tabs-nav" role="tablist" aria-label="Categorias de atividades">
+            <button type="button" class="activity-tab-btn active" data-category="todos" role="tab" aria-selected="true">
+              <span>Todos</span>
+            </button>
+            <button type="button" class="activity-tab-btn" data-category="percursos" role="tab" aria-selected="false">
+              <svg class="tab-icon-svg" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+              <span>Percursos</span>
+            </button>
+            <button type="button" class="activity-tab-btn" data-category="monumentos" role="tab" aria-selected="false">
+              <svg class="tab-icon-svg" viewBox="0 0 24 24"><path d="M12 1L3 5v2h18V5l-9-4zm7 8H5v9h2v-7h2v7h2v-7h2v7h2v-7h2v7h2V9zm-16 11v2h18v-2H3z"/></svg>
+              <span>Monumentos</span>
+            </button>
+            <button type="button" class="activity-tab-btn" data-category="atividades" role="tab" aria-selected="false">
+              <svg class="tab-icon-svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              <span>Atividades</span>
+            </button>
+            <button type="button" class="activity-tab-btn" data-category="restaurantes" role="tab" aria-selected="false">
+              <svg class="tab-icon-svg" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>
+              <span>Restaurantes</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="activities-carousel-wrapper">
+          <button type="button" class="activity-arrow-btn activity-arrow-prev" id="activityPrevBtn" aria-label="Ver atividades anteriores">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="activities-grid" id="activitiesGrid">
+            <!-- Card 1: Percursos (Destaque) -->
+            <article class="activity-card" data-categories="percursos destaque">
+              <div class="activity-card-media">
+                <img src="assets/images/activity_olival.jpg" alt="Circuito do Olival Centenário na Quinta de Santo António" loading="lazy">
+              </div>
+              <div class="activity-card-body">
+                <div class="activity-card-header">
+                  <h3 class="activity-title">Circuito do Olival Centenário</h3>
+                  <span class="activity-distance">Na herdade • 0 km</span>
+                </div>
+                <p class="activity-desc">Caminhadas tranquilas a pé ou de bicicleta entre as oliveiras de produção própria e pastagens da quinta, com silêncio absoluto ao amanhecer.</p>
+              </div>
+            </article>
+
+            <!-- Card 2: Monumentos (Destaque) -->
+            <article class="activity-card" data-categories="monumentos destaque">
+              <div class="activity-card-media">
+                <img src="assets/images/activity_castelo_alter.jpg" alt="Castelo de Alter do Chão" loading="lazy">
+              </div>
+              <div class="activity-card-body">
+                <div class="activity-card-header">
+                  <h3 class="activity-title">Castelo de Alter do Chão</h3>
+                  <span class="activity-distance">~12 km • 12 min</span>
+                </div>
+                <p class="activity-desc">Fortaleza medieval do séc. XIV mandada edificar por D. Pedro I, com imponentes muralhas de pedra e torre de menagem visitável com vista de 360º.</p>
+              </div>
+            </article>
+
+            <!-- Card 3: Monumentos (Destaque) -->
+            <article class="activity-card" data-categories="monumentos destaque">
+              <div class="activity-card-media">
+                <img src="assets/images/activity_ponte_romana.jpg" alt="Ponte Romana de Vila Formosa" loading="lazy">
+              </div>
+              <div class="activity-card-body">
+                <div class="activity-card-header">
+                  <h3 class="activity-title">Ponte Romana de Vila Formosa</h3>
+                  <span class="activity-distance">~5 km • 6 min</span>
+                </div>
+                <p class="activity-desc">Monumento do séc. I d.C. excelentemente preservado sobre a Ribeira de Seda, com 116 metros de extensão e arcos monumentais em cantaria.</p>
+              </div>
+            </article>
+
+            <!-- Card 4: Atividades (Destaque) -->
+            <article class="activity-card" data-categories="atividades destaque">
+              <div class="activity-card-media">
+                <img src="assets/images/activity_coudelaria.jpg" alt="Coudelaria de Alter Real" loading="lazy">
+              </div>
+              <div class="activity-card-body">
+                <div class="activity-card-header">
+                  <h3 class="activity-title">Coudelaria de Alter Real</h3>
+                  <span class="activity-distance">~10 km • 10 min</span>
+                </div>
+                <p class="activity-desc">Fundada em 1748 por D. João V, é o mais prestigiado centro do Cavalo Puro Sangue Lusitano. Alberga visitas guiadas às cavalariças e Falcoaria Real.</p>
+              </div>
+            </article>
+
+            <!-- Card 5: Percursos -->
+            <article class="activity-card" data-categories="percursos" style="display: none;">
+              <div class="activity-card-media">
+                <img src="assets/images/activity_ribeira_seda.jpg" alt="Trilho da Ribeira de Seda e Ponte Romana" loading="lazy">
+              </div>
+              <div class="activity-card-body">
+                <div class="activity-card-header">
+                  <h3 class="activity-title">Trilho da Ribeira de Seda &amp; Ponte Romana</h3>
+                  <span class="activity-distance">~4 km • A 5 min</span>
+                </div>
+                <p class="activity-desc">Passeio agradável pelas margens arborizadas da Ribeira de Seda até à secular ponte romana, com vegetação ripícola e avifauna protegida.</p>
+              </div>
+            </article>
+
+            <!-- Card 6: Atividades -->
+            <article class="activity-card" data-categories="atividades" style="display: none;">
+              <div class="activity-card-media">
+                <img src="assets/images/activity_darksky.jpg" alt="Observação do Céu Estrelado no Alentejo" loading="lazy">
+              </div>
+              <div class="activity-card-body">
+                <div class="activity-card-header">
+                  <h3 class="activity-title">Observação do Céu Estrelado</h3>
+                  <span class="activity-distance">Na herdade • 0 km</span>
+                </div>
+                <p class="activity-desc">Noites límpidas sem poluição luminosa que permitem admirar a Via Láctea e constelações a olho nu, diretamente do alpendre ou do solário da piscina.</p>
+              </div>
+            </article>
+
+            <!-- Card 7: Restaurantes -->
+            <article class="activity-card" data-categories="restaurantes" style="display: none;">
+              <div class="activity-card-media">
+                <img src="assets/images/activity_restaurante_alpendre.jpg" alt="Restaurante O Alpendre em Alter do Chão" loading="lazy">
+              </div>
+              <div class="activity-card-body">
+                <div class="activity-card-header">
+                  <h3 class="activity-title">Restaurante O Alpendre</h3>
+                  <span class="activity-distance">~12 km • Alter do Chão</span>
+                </div>
+                <p class="activity-desc">Referência gastronómica da região para saborear pratos autênticos: entrecosto com migas de espargos, sopa de cação, bochechas de porco e sericaia.</p>
+              </div>
+            </article>
+
+            <!-- Card 8: Restaurantes -->
+            <article class="activity-card" data-categories="restaurantes" style="display: none;">
+              <div class="activity-card-media">
+                <img src="assets/images/activity_taberna_camoes.jpg" alt="Taberna do Ti Camões em Seda" loading="lazy">
+              </div>
+              <div class="activity-card-body">
+                <div class="activity-card-header">
+                  <h3 class="activity-title">Taberna do Ti Camões</h3>
+                  <span class="activity-distance">~2.5 km • Seda</span>
+                </div>
+                <p class="activity-desc">Ambiente acolhedor e genuíno no coração de Seda, ideal para petiscos rústicos, queijos curados de ovelha, enchidos caseiros e vinhos locais.</p>
+              </div>
+            </article>
+          </div>
+
+          <button type="button" class="activity-arrow-btn activity-arrow-next" id="activityNextBtn" aria-label="Ver mais atividades">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <div class="activities-pagination" id="activitiesPagination">
+          <button type="button" class="activity-page-dot active" data-page="0" aria-label="Página 1 de atividades"></button>
+          <button type="button" class="activity-page-dot" data-page="1" aria-label="Página 2 de atividades"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         F. OPINIÕES DOS HÓSPEDES (Avaliações Transparentes e Verificadas)
+         ======================================================================= -->
+    <section id="opinioes" class="section section-bg-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>O Que Dizem os Nossos Visitantes</h2>
+          <p>O reflexo da hospitalidade alentejana, do silêncio da herdade e da atenção cuidada aos pormenores.</p>
+        </div>
+
+        <div style="background-color: #fff9db; border: 1px solid #ffe066; border-radius: var(--border-radius-sm); padding: 0.75rem 1.25rem; margin-bottom: 2rem; font-size: 0.85rem; color: #856404; display: flex; align-items: center; gap: 0.5rem;">
+          <strong>Nota de Transparência Bruto:</strong>
+          <span>Apresentação estruturada com base na média histórica em canais públicos (Booking 9.4/10). [Requer validação final do anfitrião].</span>
+        </div>
+
+        <div class="reviews-ticker-wrapper" aria-label="Avaliações dos hóspedes em rotação contínua">
+          <div class="reviews-ticker-track">
+            <!-- Opinião 1 -->
+            <article class="review-card">
+              <div class="review-header">
+                <div class="review-stars">
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="review-date">Setembro de 2025</span>
+              </div>
+              <p class="review-text">"O silêncio é absoluto e a casinha tinha tudo o que precisávamos. O detalhe do pão fresco todas as manhãs deixado na porta e o azeite da herdade fazem toda a diferença. Uma paz difícil de encontrar noutro sítio."</p>
+              <div class="review-author">
+                <div class="review-name">Maria S. <span class="validation-badge">validação requerida</span></div>
+                <div class="review-origin">Lisboa, Portugal • Casinha T1 Tradicional</div>
+              </div>
+            </article>
+
+            <!-- Opinião 2 -->
+            <article class="review-card">
+              <div class="review-header">
+                <div class="review-stars">
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="review-date">Agosto de 2025</span>
+              </div>
+              <p class="review-text">"Excelente refúgio familiar. As crianças adoraram a piscina e a liberdade de correr pelo olival. O check-in autónomo funcionou na perfeição e os anfitriões foram sempre atenciosos por telemóvel."</p>
+              <div class="review-author">
+                <div class="review-name">Pedro &amp; Sofia <span class="validation-badge">validação requerida</span></div>
+                <div class="review-origin">Porto, Portugal • Casinha Familiar T2</div>
+              </div>
+            </article>
+
+            <!-- Opinião 3 -->
+            <article class="review-card">
+              <div class="review-header">
+                <div class="review-stars">
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="review-date">Junho de 2025</span>
+              </div>
+              <p class="review-text">"Noites estreladas inesquecíveis. A localização em Seda é perfeita para visitar a Coudelaria e descansar sem qualquer ruído. A cama é confortável e a limpeza irrepreensível. Voltaremos certamente."</p>
+              <div class="review-author">
+                <div class="review-name">Carlos B. <span class="validation-badge">validação requerida</span></div>
+                <div class="review-origin">Coimbra, Portugal • Casinha do Olival</div>
+              </div>
+            </article>
+
+            <!-- Opinião 4 (Nova) -->
+            <article class="review-card">
+              <div class="review-header">
+                <div class="review-stars">
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="review-date">Outubro de 2024</span>
+              </div>
+              <p class="review-text">"A serenidade da herdade supera qualquer expectativa. Pequeno-almoço no terraço com o pão quente da manhã, passeios a pé entre as oliveiras e um pôr do sol alentejano inesquecível."</p>
+              <div class="review-author">
+                <div class="review-name">Ana &amp; Miguel <span class="validation-badge">validação requerida</span></div>
+                <div class="review-origin">Évora, Portugal • Casinha T1 Tradicional</div>
+              </div>
+            </article>
+
+            <!-- Opinião 5 (Nova) -->
+            <article class="review-card">
+              <div class="review-header">
+                <div class="review-stars">
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="review-date">Julho de 2025</span>
+              </div>
+              <p class="review-text">"Hospitalidade calorosa e atenciosa. O alojamento estava impecavelmente limpo, a piscina tem uma vista desafogada revigorante e a garrafa de azeite da quinta é um gesto de enorme requinte."</p>
+              <div class="review-author">
+                <div class="review-name">Teresa M. <span class="validation-badge">validação requerida</span></div>
+                <div class="review-origin">Faro, Portugal • Suíte da Herdade</div>
+              </div>
+            </article>
+
+            <!-- Opinião 6 (Nova) -->
+            <article class="review-card">
+              <div class="review-header">
+                <div class="review-stars">
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="review-date">Maio de 2025</span>
+              </div>
+              <p class="review-text">"Espaço amplo e acolhedor para a nossa família. A tranquilidade do Alentejo profundo com todo o conforto moderno, desde o ar condicionado à kitchenette bem apetrechada. Sentimo-nos em casa."</p>
+              <div class="review-author">
+                <div class="review-name">Rui &amp; Joana <span class="validation-badge">validação requerida</span></div>
+                <div class="review-origin">Braga, Portugal • Casinha Familiar T2</div>
+              </div>
+            </article>
+
+            <!-- DUPLICADOS (Aria-Hidden) para Loop Infinito Contínuo e Sem Fissuras -->
+            <article class="review-card" aria-hidden="true">
+              <div class="review-header">
+                <div class="review-stars">
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="review-date">Setembro de 2025</span>
+              </div>
+              <p class="review-text">"O silêncio é absoluto e a casinha tinha tudo o que precisávamos. O detalhe do pão fresco todas as manhãs deixado na porta e o azeite da herdade fazem toda a diferença. Uma paz difícil de encontrar noutro sítio."</p>
+              <div class="review-author">
+                <div class="review-name">Maria S. <span class="validation-badge">validação requerida</span></div>
+                <div class="review-origin">Lisboa, Portugal • Casinha T1 Tradicional</div>
+              </div>
+            </article>
+
+            <article class="review-card" aria-hidden="true">
+              <div class="review-header">
+                <div class="review-stars">
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="review-date">Agosto de 2025</span>
+              </div>
+              <p class="review-text">"Excelente refúgio familiar. As crianças adoraram a piscina e a liberdade de correr pelo olival. O check-in autónomo funcionou na perfeição e os anfitriões foram sempre atenciosos por telemóvel."</p>
+              <div class="review-author">
+                <div class="review-name">Pedro &amp; Sofia <span class="validation-badge">validação requerida</span></div>
+                <div class="review-origin">Porto, Portugal • Casinha Familiar T2</div>
+              </div>
+            </article>
+
+            <article class="review-card" aria-hidden="true">
+              <div class="review-header">
+                <div class="review-stars">
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="review-date">Junho de 2025</span>
+              </div>
+              <p class="review-text">"Noites estreladas inesquecíveis. A localização em Seda é perfeita para visitar a Coudelaria e descansar sem qualquer ruído. A cama é confortável e a limpeza irrepreensível. Voltaremos certamente."</p>
+              <div class="review-author">
+                <div class="review-name">Carlos B. <span class="validation-badge">validação requerida</span></div>
+                <div class="review-origin">Coimbra, Portugal • Casinha do Olival</div>
+              </div>
+            </article>
+
+            <article class="review-card" aria-hidden="true">
+              <div class="review-header">
+                <div class="review-stars">
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="review-date">Outubro de 2024</span>
+              </div>
+              <p class="review-text">"A serenidade da herdade supera qualquer expectativa. Pequeno-almoço no terraço com o pão quente da manhã, passeios a pé entre as oliveiras e um pôr do sol alentejano inesquecível."</p>
+              <div class="review-author">
+                <div class="review-name">Ana &amp; Miguel <span class="validation-badge">validação requerida</span></div>
+                <div class="review-origin">Évora, Portugal • Casinha T1 Tradicional</div>
+              </div>
+            </article>
+
+            <article class="review-card" aria-hidden="true">
+              <div class="review-header">
+                <div class="review-stars">
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="review-date">Julho de 2025</span>
+              </div>
+              <p class="review-text">"Hospitalidade calorosa e atenciosa. O alojamento estava impecavelmente limpo, a piscina tem uma vista desafogada revigorante e a garrafa de azeite da quinta é um gesto de enorme requinte."</p>
+              <div class="review-author">
+                <div class="review-name">Teresa M. <span class="validation-badge">validação requerida</span></div>
+                <div class="review-origin">Faro, Portugal • Suíte da Herdade</div>
+              </div>
+            </article>
+
+            <article class="review-card" aria-hidden="true">
+              <div class="review-header">
+                <div class="review-stars">
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg class="icon-svg" style="fill: #d97706; width: 0.85rem; height: 0.85rem;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="review-date">Maio de 2025</span>
+              </div>
+              <p class="review-text">"Espaço amplo e acolhedor para a nossa família. A tranquilidade do Alentejo profundo com todo o conforto moderno, desde o ar condicionado à kitchenette bem apetrechada. Sentimo-nos em casa."</p>
+              <div class="review-author">
+                <div class="review-name">Rui &amp; Joana <span class="validation-badge">validação requerida</span></div>
+                <div class="review-origin">Braga, Portugal • Casinha Familiar T2</div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Controlos Interativos de Rotação Manual das Opiniões (Apple Design) -->
+        <div class="reviews-controls" aria-label="Controlos de navegação das opiniões">
+          <button type="button" class="reviews-nav-btn reviews-prev-btn" id="reviewsPrevBtn" aria-label="Opinião anterior">
+            <svg class="reviews-nav-svg" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="reviews-nav-btn reviews-next-btn" id="reviewsNextBtn" aria-label="Próxima opinião">
+            <svg class="reviews-nav-svg" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         G. FAQ E FORMULÁRIO DE DÚVIDAS (Acordeão de Perguntas + Formulário Direto)
+         ======================================================================= -->
+    <section id="faq-duvidas" class="section">
+      <span id="faqs" class="section-anchor"></span>
+      <div class="container">
+        <div class="section-header">
+          <h2>Perguntas Frequentes</h2>
+          <p>Encontre respostas claras para as questões mais comuns ou envie-nos a sua dúvida diretamente.</p>
+        </div>
+
+        <div class="faq-duvidas-layout">
+          <!-- Acordeão de FAQs -->
+          <div class="faq-accordion-col">
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span class="faq-question-title">Como funciona o pequeno-almoço e a entrega de pão fresco?</span>
+                <span class="faq-icon-wrapper" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Todas as manhãs (exceto domingos e feriados), é entregue pão alentejano fresco à porta de cada casinha. As unidades dispõem de cafeteira com café incluído, louças e uma garrafa de 0.25L de azeite virgem extra de produção própria da herdade, garantindo total autonomia e tranquilidade para tomar o pequeno-almoço ao seu ritmo no terraço ou na sala.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span class="faq-question-title">Quais são os horários e o procedimento de check-in autónomo?</span>
+                <span class="faq-icon-wrapper" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>O check-in realiza-se a partir das 15h00 e o check-out até às 11h00. O processo é autónomo e muito simples: na véspera da estadia, o anfitrião entra em contacto telefónico para dar as boas-vindas e fornecer os códigos de acesso à sua casinha, permitindo uma entrada flexível e sem esperas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span class="faq-question-title">As casinhas dispõem de kitchenette e comodidades para cozinhar?</span>
+                <span class="faq-icon-wrapper" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Sim. As Casinhas T1, T2 e do Olival possuem kitchenette completa com placa de indução, frigorífico, micro-ondas, torradeira, cafeteira e louças para refeições ligeiras com privacidade. A Suíte da Herdade dispõe de frigorífico de apoio e cafeteira.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span class="faq-question-title">A piscina exterior e o solário são de acesso livre aos hóspedes?</span>
+                <span class="faq-icon-wrapper" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Sim, a piscina exterior e o solário com espreguiçadeiras e vista aberta sobre o olival são de acesso partilhado e gratuito para todos os hóspedes da herdade durante a época balnear, ideal para momentos de desconexão total.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span class="faq-question-title">O estacionamento na propriedade é gratuito e seguro?</span>
+                <span class="faq-icon-wrapper" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Sim. A herdade possui 58 hectares e dispõe de estacionamento privativo e gratuito no interior da propriedade, com acesso fácil e direto junto às casinhas, sem necessidade de reserva antecipada.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span class="faq-question-title">É permitida a estadia com animais de estimação?</span>
+                <span class="faq-icon-wrapper" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>A aceitação de animais de estimação está sujeita a consulta e confirmação prévia com o anfitrião, de forma a garantir a convivência harmoniosa com os restantes hóspedes e a tranquilidade da herdade.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span class="faq-question-title">É possível solicitar berço para crianças ou bebés?</span>
+                <span class="faq-icon-wrapper" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Sim, dispomos de berço para bebés até 3 anos mediante pedido prévio no momento da reserva. Para famílias maiores, a Casinha Familiar T2 dispõe de dois quartos autónomos e acomoda confortavelmente até 4 hóspedes.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span class="faq-question-title">Existe rede Wi-Fi estável nas casinhas para teletrabalho?</span>
+                <span class="faq-icon-wrapper" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer-inner">
+                  <div class="faq-answer">
+                    <p>Sim. Todas as unidades contam com ligação à internet Wi-Fi gratuita e de boa velocidade, permitindo tanto navegação pessoal e streaming como estadias de teletrabalho com serenidade no Alto Alentejo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna do Formulário de Dúvidas (Sticky no Centro do Ecrã) -->
+          <div class="faq-form-col">
+            <div class="duvidas-form-card">
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--dark-neutral);">Ainda tem alguma questão?</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Envie-nos a sua pergunta antes de reservar. Respondemos com a máxima brevidade por telemóvel ou email.</p>
+              
+              <form id="duvidasForm">
+                <div class="form-group" style="margin-bottom: 0.9rem;">
+                  <label for="duvidaNome" style="font-size: 0.85rem; font-weight: 600;">O Seu Nome</label>
+                  <input type="text" id="duvidaNome" class="form-control" placeholder="Nome completo" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 0.9rem;">
+                  <label for="duvidaContacto" style="font-size: 0.85rem; font-weight: 600;">Email ou Telemóvel</label>
+                  <input type="text" id="duvidaContacto" class="form-control" placeholder="email@exemplo.com ou +351 9..." required>
+                </div>
+                <div class="form-group" style="margin-bottom: 1.1rem;">
+                  <label for="duvidaMensagem" style="font-size: 0.85rem; font-weight: 600;">A Sua Mensagem</label>
+                  <textarea id="duvidaMensagem" rows="3" class="form-control" placeholder="Escreva aqui a sua dúvida..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark" style="width: 100%; padding: 0.75rem;">Enviar Questão</button>
+                <div id="duvidasResultBox" style="display: none; margin-top: 1rem; font-size: 0.85rem; padding: 0.75rem; border-radius: var(--border-radius-sm);"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       H. FOOTER — CONTACTOS, LOCALIZAÇÃO E NAVEGAÇÃO
+       (Sem secção de contactos no corpo da página; exclusivamente no footer)
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Coluna 1: Logótipo Branco & Contactos Verificados -->
+        <div class="footer-col">
+          <div class="footer-logo-container">
+            <img src="assets/logos/logo_13.png" alt="Casinhas de Santo António" class="footer-logo">
+          </div>
+          <p style="color: rgba(255,255,255,0.78); font-size: 0.9rem; line-height: 1.55;">
+            Turismo rural autêntico no coração do Alto Alentejo. Casas rústicas independentes, olival tradicional e silêncio pleno na Quinta de Santo António.
+          </p>
+          <div class="footer-contacts">
+            <p><a href="tel:+351930583315">Telemóvel: +351 930 583 315</a></p>
+            <p><a href="mailto:geral@casinhasdesantoantonio.pt">Email: geral@casinhasdesantoantonio.pt</a></p>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 0.3rem;">Seda, Alter do Chão, Alto Alentejo, Portugal</p>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Navegação Interna da Página Única e Reservas -->
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#espaco-casinhas">Casinhas</a></li>
+            <li><a href="#atividades">Arredores</a></li>
+            <li><a href="#opinioes">Opiniões</a></li>
+            <li><a href="#faq-duvidas">FAQs</a></li>
+            <li style="margin-top: 0.65rem;"><a href="reservas.html" class="nav-cta footer-nav-cta">Reservar Estadia</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Localização com Google Maps por baixo dos contactos -->
+        <div class="footer-col">
+          <h4>Localização &amp; Acesso</h4>
+          <p class="footer-location-address">
+            Quinta de Santo António, 7440-252 Seda, Alter do Chão, Alto Alentejo, Portugal<br>
+            <span style="font-size: 0.82rem; color: rgba(255,255,255,0.65);">GPS: 39°10'22.63"N 7°46'35.11"W</span>
+          </p>
+          <!-- Google Maps incorporado logo por baixo dos contactos -->
+          <div class="footer-map-container">
+            <iframe 
+              class="footer-map-frame"
+              title="Localização Casinhas de Santo António em Seda"
+              src="https://maps.google.com/maps?q=39.1729528,-7.7764194&z=14&output=embed"
+              loading="lazy">
+            </iframe>
+          </div>
+          <div style="margin-top: 0.65rem;">
+            <a href="https://maps.google.com/maps?q=39.1729528,-7.7764194" target="_blank" rel="noopener noreferrer" class="footer-map-cta">
+              Abrir no Google Maps &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <div>© 2026 Casinhas de Santo António. Todos os direitos reservados.</div>
+          <div class="footer-legal-links">
+            <a href="#" class="legal-modal-trigger" data-legal="privacy">Política de Privacidade</a>
+            <span class="sep">•</span>
+            <a href="#" class="legal-modal-trigger" data-legal="terms">Termos e Condições</a>
+            <span class="sep">•</span>
+            <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
+          </div>
+        </div>
+        <div class="prototype-notice">
+          Protótipo Demonstrativo Bruto • Sem transações financeiras reais
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Barra Fixa Mobile para Contacto e Reserva Rápida -->
+  <div class="mobile-bottom-bar">
+    <div class="mobile-bottom-bar-inner">
+      <a href="https://wa.me/351930583315?text=Ol%C3%A1%21%20Gostaria%20de%20consultar%20disponibilidade%20para%20as%20Casinhas%20de%20Santo%20Ant%C3%B3nio." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="tel:+351930583315" class="btn btn-dark">Ligar</a>
+      <a href="reservas.html" class="btn btn-primary">Reservar</a>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
